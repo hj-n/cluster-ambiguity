@@ -36,7 +36,7 @@ class ClusterAmbiguity():
 	A class for computing cluster ambiguity based on clustme data
 	"""
 
-	def __init__(self, corr_thld=0.05, verbose=0, random_state=0, S=3.0, mode="average", max_gmm_num=50):
+	def __init__(self, corr_thld=0, verbose=0, random_state=0, S=3.0, mode="entropy", max_gmm_num=18):
 		"""
 		INPUT:
 		- corr_thld: the threshold determining the correlation between two clusters
