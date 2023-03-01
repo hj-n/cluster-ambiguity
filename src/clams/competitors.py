@@ -6,14 +6,14 @@ import numpy as np
 
 from sklearn.metrics import adjusted_mutual_info_score, v_measure_score
 
-def get_clustering_diff(clusterer, metric, X):
+def get_clustering_diff(clusterer, metric, X, iteration=100):
 	labels = []
-	for i in range(20):
+	for i in range(iteration):
 		label = clusterer(X)
 		labels.append(label)
 	
 	results = []
-	for i in range(20):
+	for i in range(iteration):
 		for j in range(0, i):
 			results.append(metric(labels[i], labels[j]))
 	
