@@ -219,7 +219,7 @@ class ClusterAmbiguity():
 			(1 - self.filtered_prob_single_list) * np.log2(1 - self.filtered_prob_single_list)
 		)
 
-		self.ambiguity_score = np.mean(entropy_list)
+		self.ambiguity_score = np.mean(self.entropy_list)
 		return self.ambiguity_score
 
 		
