@@ -214,7 +214,7 @@ class ClusterAmbiguity():
 		self.filtered_prob_single_list = np.array(self.filtered_prob_single_list)
 		self.filtered_prob_single_list[self.filtered_prob_single_list < 0] = 1e-5
 		self.filtered_prob_single_list[self.filtered_prob_single_list > 1] = 1 - 1e-5
-		entropy_list = - (
+		self.entropy_list = - (
 			self.filtered_prob_single_list * np.log2(self.filtered_prob_single_list) +
 			(1 - self.filtered_prob_single_list) * np.log2(1 - self.filtered_prob_single_list)
 		)
